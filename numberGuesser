@@ -1,0 +1,39 @@
+const generateTarget = () => {
+  return Math.floor(Math.random() * 10);
+}
+
+const compareGuesses = (userG, comG, targN) => {
+if (userG == targN) {
+  return true; }
+else if (comG == targN) {
+  return false;
+}
+ if (Math.abs(targN-comG) > Math.abs(targN-userG)) {
+  return true;
+} 
+if (Math.abs(targN-userG) >= Math.abs(targN-comG)) {
+  return false;
+} 
+else (Math.abs(targN-userG) == Math.abs(targN-comG)) 
+{return true;}
+
+if (userG > 9 || userG < 0) {
+  console.log(alert('out of range'));
+}
+} 
+
+
+const updateScore = winner => {
+  if (winner === 'human') {
+    humanScore++;
+  } else if (winner === 'computer') {
+    computerScore++;
+  }
+}
+console.log(updateScore('human'));
+
+
+const advancedRound = currentRoundNumber => {
+console.log(currentRoundNumber + 1);
+}
+
